@@ -1,0 +1,269 @@
+// @import "second";
+@import '_fonts.scss';
+@import '_variables.scss';
+@import '_mixin.scss';
+
+.studio {
+  background: $colorBlock;
+  padding-top: 30px;
+  padding-bottom: 66px;
+}
+
+.studio__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px;
+}
+
+.studio__header {
+  font-size: 24px;
+  line-height: 31px;
+  font-family: 'TTFirsNeue-DemiBold', sans-serif;
+  font-weight: 700;
+  color: $colorWhite;
+  padding-bottom: 5px;
+}
+
+.studio__text {
+  font-size: 16px;
+  line-height: 28px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: $colorText;
+  padding-bottom: 5px;
+}
+
+.studio__photo {
+  padding-top: 33px;
+  padding-bottom: 20px;
+  width: 100%;
+}
+
+.studio__photo-vision1024 {
+  display: none;
+}
+
+.studio__photo-vision768 {
+  display: none;
+}
+
+.studio__photo-vision320 {
+  display: none;
+}
+
+.studio__clue {
+  font-size: 24px;
+  line-height: 22px;
+  font-family: 'TTFirsNeue-Regular', sans-serif;
+  font-weight: 400;
+  color: $colorWhite;
+  padding-bottom: 15px;
+}
+
+.studio__form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.studio__label {
+  position: relative;
+}
+
+.studio__input {
+  @include textForm;
+  color: $colorWhite;
+  width: 171%;
+  padding: 14px 50px 15px 23px;
+  background-color: $colorForm;
+  border: 1px solid $colorForm;
+  outline: none;
+  border-radius: 0;
+}
+
+.studio__input:hover::placeholder {
+  color: $colorOrange;
+  transition: color 0.6s ease-in-out;
+}
+
+.studio__input:focus {
+  border: 1px solid $colorOrange;
+}
+
+.studio__input:hover {
+  color: $colorOrange;
+}
+
+.studio__btn {
+  background-color: $colorOrange;
+  @include styleBTN;
+}
+
+.studio__btn:hover {
+  background-color: $colorOrangeDark;
+  border: 3px solid $colorOrangeDark;
+}
+
+.studio__btn:focus {
+  background-color: $colorOrange;
+  border: 3px solid $colorOrangeMedium;
+}
+
+.studio__btn:active {
+  background-color: $colorOrangeMedium;
+  border: 3px solid $colorOrangeMedium;
+}
+
+.studio__label .just-validate-error-label {
+  top: 3px;
+  left: 20px;
+}
+
+.just-validate-error-label {
+  position: absolute;
+  white-space: nowrap;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: $colorError !important;
+
+}
+
+.just-validate-error-field {
+  border: 1px solid $colorError;
+}
+
+
+@media (max-width:1440px) {
+  .studio {
+    padding-bottom: 82px;
+  }
+
+  .studio__grid {
+    gap: 30px;
+  }
+
+  .studio-contents {
+    padding-right: 7px;
+  }
+
+  .studio__photo-vision {
+    display: none;
+  }
+
+  .studio__photo-vision1024 {
+    display: block;
+  }
+
+  .studio__photo {
+    padding-bottom: 23px;
+  }
+
+  .studio__form {
+    display: block;
+  }
+
+  .studio__input {
+    width: 73%;
+    padding: 14px 23px 15px 23px;
+  }
+
+  .studio__clue {
+    padding-bottom: 17px;
+  }
+
+  .studio__btn {
+    margin-top: 20px;
+  }
+
+  .btn-footer {
+    padding-top: 20px;
+  }
+
+  .studio__label .just-validate-error-label {
+    top: -13px;
+  }
+}
+
+@media (max-width:992px) {
+  .studio {
+    padding-bottom: 57px;
+  }
+
+  .studio__photo-vision1024 {
+    display: none;
+  }
+
+  .studio__photo-vision768 {
+    display: block;
+  }
+
+  .studio__contents {
+    padding-right: 6px;
+  }
+
+  .studio__input {
+    width: 100%;
+    padding: 14px 23px 15px 23px;
+  }
+}
+
+@media (max-width:550px) {
+  .studio {
+    padding-top: 32px;
+    padding-bottom: 60px;
+  }
+
+  .studio__grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 17px;
+  }
+
+  .studio__contents {
+    padding-right: 0px;
+  }
+
+  .studio__header {
+    font-size: 18px;
+    line-height: 23px;
+  }
+
+  .studio__text {
+    font-size: 14px;
+    line-height: 25px;
+  }
+
+  .studio__photo {
+    padding-top: 0;
+    padding-bottom: 26px;
+  }
+
+  .studio__photo-vision768 {
+    display: none;
+  }
+
+  .studio__photo-vision320 {
+    display: block;
+  }
+
+  .studio__clue {
+    margin-left: -2px;
+    padding-bottom: 14px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .studio__input {
+    padding: 11px 22px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .studio__btn {
+    @include styleBTN-320;
+  }
+
+  .studio__label .just-validate-error-label {
+    top: -10px;
+  }
+}

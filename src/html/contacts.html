@@ -1,0 +1,86 @@
+<section class="contacts " id="contacts">
+  <div class="contacts__mobile container">
+    <h2 class="contacts__header">
+      Контакты
+    </h2>
+    <div class="contacts__grid">
+
+      <div class="contacts__office" data-contacts-office>
+
+        <div class="contacts__place" data-contacts-close>
+          <button class="contacts__btnClose" data-contacts-btn>
+            <span class="contacts__line"></span>
+          </button>
+          <h2 class="contacts__name">
+            Студия «High pass»
+          </h2>
+          <p class="contacts__address contacts__adress-vision320">
+            107045, Москва, Даев переулок, дом 41, бизнес-центр «Даев Плаза», этаж 8, офис № 8
+          </p>
+          <p class="contacts__address contacts__adress-vision1920">
+            107045, Москва, Даев переулок,
+            <span class="contacts__adress-vision768">&nbsp; дом 41, бизнес-центр</span>
+          </p>
+          <p class="contacts__address contacts__adress-vision992">
+            дом 41, бизнес-центр «Даев Плаза»,
+          </p>
+          <div class="contacts-flex">
+            <p class="contacts__address contacts__adress-vision1920">
+              <span class="contacts__adress-vision">«Даев Плаза»,&nbsp;</span>
+              этаж 8, офис № 82
+            </p>
+            <a href="#" class="contacts__contact contacts__contact-1024">
+              <svg class="contacts__svg contacts__contact-svg1024">
+                <use xlink:href="/img/sprite.svg#Phone" class=""></use>
+              </svg>
+              <svg class="contacts__svg contacts__contact-svg320">
+                <use xlink:href="/img/sprite.svg#Phone320" class=""></use>
+              </svg>
+              <p class="contacts__phone">
+                +7 495 424-23-532
+              </p>
+            </a>
+          </div>
+          <a href="#" class="contacts__contact contacts__contact-1920">
+            <svg class="contacts__svg contacts__contact-svg">
+              <use xlink:href="/img/sprite.svg#Phone" class=""></use>
+            </svg>
+
+            <p class="contacts__phone">
+              +7 495 424-23-532
+            </p>
+          </a>
+        </div>
+
+        <div id="mapAddress" class="map"></div>
+      </div>
+
+      <div class="contacts-request">
+        <h2 class="contacts-request__header">
+          Оставить заявку
+        </h2>
+        <p class="contacts-request__text">
+          Оставьте ваши данные, указав в графе «Комментарий» желаемые время и дату съёмки или другого мероприятия
+        </p>
+        <form action="mail.php" method="post" enctype="multipart/form-data" class="contacts-request__form"
+          id="formContacts">
+          <label class="contacts-request__label">
+            <input minlength="2" maxlength="30" required type="text" id="name" name="name" data-validate-field="name"
+              placeholder="Имя" class="contacts-request__input">
+          </label>
+          <label class="contacts-request__label">
+            <input required type="email" id="email" name="email" placeholder="Email" data-validate-field="email"
+              class="contacts-request__input">
+          </label>
+          <label class="contacts-request__label">
+            <textarea name="textarea" cols="30" rows="6" placeholder="Комментарий"
+              class="contacts-request__textarea"></textarea>
+          </label>
+          <button type="submit" class="contacts-request__btn">
+            Отправить
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

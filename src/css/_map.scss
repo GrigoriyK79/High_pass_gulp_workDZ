@@ -1,0 +1,37 @@
+.map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: lavender;
+}
+
+[class*="copyrights-pane"] {
+  display: none !important;
+}
+
+/* Черно-белая карта */
+[class*="ground-pane"] {
+  filter: grayscale(1);
+}
+
+// [class*="balloon__layout"] {
+//   display: none !important;
+// }
+
+// [class*="balloon__tail"] {
+//   width: 12px !important;
+//   height: 12px !important;
+//   background: $colorOrange !important;
+//   border-radius: 100% !important;
+// }
+
+// [class*="balloon__tail"]::after {
+// background-color: transparent !important;
+// }
+
+// .adress__icon {
+//   width: 12px;
+//   height: 12px;
+// }

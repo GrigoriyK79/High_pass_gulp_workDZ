@@ -1,0 +1,506 @@
+// @import "second";
+@import '_fonts.scss';
+@import '_variables.scss';
+@import '_mixin.scss';
+
+.contacts {
+  padding-top: 34px;
+  padding-bottom: 67px;
+}
+
+.contacts__header {
+  padding-bottom: 23px;
+  font-size: 24px;
+  line-height: 31px;
+  font-family: 'TTFirsNeue-DemiBold', sans-serif;
+  font-weight: 700;
+}
+
+.contacts__grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 30px;
+}
+
+.contacts__office {
+  position: relative;
+  grid-column: span 8;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.contacts__place {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-decoration: none;
+  width: 48%;
+  height: 100%;
+  padding: 85px 60px 60px;
+  background-color: rgba(32, 32, 32, 0.85);
+}
+
+.contacts--close {
+  display: none;
+}
+
+.contacts__btnClose {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: #808080;
+  cursor: pointer;
+}
+
+.contacts__btnClose::before,
+.contacts__btnClose::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background-color: $colorWhite;
+}
+
+.contacts__btnClose::before {
+  top: 45%;
+  right: 20%;
+  width: 60%;
+  transform: rotate(45deg);
+}
+
+.contacts__btnClose::after {
+  bottom: auto;
+  width: 60%;
+  top: 45%;
+  left: 20%;
+  transform: rotate(-45deg);
+}
+
+.contacts__name {
+  font-size: 24px;
+  line-height: 22px;
+  font-family: 'TTFirsNeue-Regular', sans-serif;
+  font-weight: 400;
+  color: $colorWhite;
+  margin: 0;
+  padding-bottom: 6px;
+}
+
+.contacts__address {
+  font-size: 16px;
+  line-height: 28px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: $colorText;
+  margin: 0;
+  padding-bottom: 1px;
+}
+
+.contacts__adress-vision768,
+.contacts__adress-vision320,
+.contacts__adress-vision {
+  display: none;
+}
+
+.contacts__contact {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+}
+
+.contacts__contact:focus {
+  padding: 6px;
+  outline: none;
+  border: 2px solid $colorOrangeDark;
+  transition: border 0.7s ease-in-out;
+}
+
+.contacts__svg {
+  width: 22px;
+  height: 22px;
+}
+
+.contacts__contact-1024 {
+  display: none;
+}
+
+.contacts__contact-svg320,
+.contacts__contact-svg1024 {
+  display: none;
+}
+
+.contacts__phone {
+  padding-left: 2px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 21px;
+  font-family: 'TTFirsNeue-Regular', sans-serif;
+  font-weight: 400;
+  color: $colorOrange;
+}
+
+.contacts-request {
+  grid-column: span 4;
+}
+
+.contacts-request__header {
+  font-size: 24px;
+  line-height: 22px;
+  font-family: 'TTFirsNeue-Regular', sans-serif;
+  font-weight: 400;
+  color: $colorBlock;
+  margin-top: -6px;
+  padding-bottom: 5px;
+}
+
+.contacts-request__text {
+  font-size: 16px;
+  line-height: 22px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: $colorDate;
+  padding-bottom: 13px;
+}
+
+.contacts-request__label {
+  position: relative;
+}
+
+.contacts-request__input {
+  @include textForm;
+  color: $colorWhite;
+  padding: 14px 25px 15px 23px;
+  width: 100%;
+  background-color: $colorFormContacts;
+  border: 1px solid $colorFormContacts;
+  outline: none;
+  border-radius: 0;
+  margin-bottom: 20px;
+}
+
+.contacts-request__input::placeholder {
+  color: $colorText;
+}
+
+.contacts-request__input:hover::placeholder {
+  color: $colorOrange;
+  transition: color 0.6s ease-in-out;
+}
+
+.contacts-request__input:focus {
+  border: 1px solid $colorOrange;
+  transition: border 0.6s ease-in-out;
+}
+
+.contacts-request__input:hover {
+  color: $colorOrange;
+}
+
+.contacts-request__textarea {
+  @include textForm;
+  color: $colorWhite;
+  padding: 14px 20px 19px 23px;
+  width: 100%;
+  background-color: $colorFormContacts;
+  border: 1px solid $colorFormContacts;
+  margin-bottom: 17px;
+  resize: none;
+  outline: none;
+  border-radius: 0;
+}
+
+.contacts-request__textarea::placeholder {
+  color: $colorText;
+}
+
+.contacts-request__textarea:hover::placeholder {
+  color: $colorOrange;
+  transition: color 0.6s ease-in-out;
+}
+
+.contacts-request__textarea:focus {
+  border: 1px solid $colorOrange;
+  transition: border 0.6s ease-in-out;
+}
+
+.contacts-request__textarea:hover {
+  color: $colorOrange;
+}
+
+.contacts-request__btn {
+  background-color: $colorOrange;
+  @include styleBTN;
+}
+
+.contacts-request__btn:hover {
+  background-color: $colorOrangeDark;
+  border: 3px solid $colorOrangeDark;
+}
+
+.contacts-request__btn:focus {
+  background-color: $colorOrange;
+  border: 3px solid $colorOrangeMedium;
+}
+
+.contacts-request__btn:active {
+  background-color: $colorOrangeMedium;
+  border: 3px solid $colorOrangeMedium;
+}
+
+.contacts-request__label .just-validate-error-label {
+  top: -11px;
+  left: 20px;
+}
+
+.just-validate-error-label {
+  position: absolute;
+  white-space: nowrap;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: $colorError !important;
+}
+
+.just-validate-error-field {
+  border: 1px solid $colorError;
+}
+
+.contacts__label {
+  width: 12px;
+  height: 12px;
+}
+
+@media (max-width: 1440px) {
+  .contacts {
+    padding-bottom: 35px;
+  }
+
+  .contacts__grid {
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  .contacts__office {
+    grid-column: span 5;
+    padding-top: 51%;
+  }
+
+  .contacts__place {
+    width: 100%;
+    min-height: auto;
+    padding: 24px 30px 18px;
+  }
+
+  .contacts__contact-1920 {
+    display: none;
+  }
+
+  .contacts__contact-1024 {
+    display: flex;
+    padding-left: 10px;
+  }
+
+  .contacts__contact-svg1024 {
+    display: block;
+  }
+
+  .contacts-flex {
+    display: flex;
+  }
+
+  .contacts__phone {
+    margin-top: 5px;
+  }
+
+  .contacts-request {
+    grid-column: span 3;
+  }
+
+  .contacts-request__header {
+    margin-top: -8px;
+  }
+
+  .contacts-request__textarea {
+    padding-right: 38px;
+    margin-bottom: 17px;
+  }
+}
+
+@media (max-width: 992px) {
+  .contacts__grid {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 24px;
+  }
+
+  .contacts__office {
+    grid-column: span 6;
+    padding-top: 42%;
+  }
+
+  .contacts--office {
+    padding-top: 64%;
+  }
+
+  .contacts__place {
+    padding: 27px 30px 23px;
+  }
+
+  .contacts__adress-vision992 {
+    display: none;
+  }
+
+  .contacts__adress-vision1920,
+  .contacts__adress-vision {
+    display: flex;
+  }
+
+  .contacts__adress-vision768 {
+    display: flex;
+  }
+
+  .contacts__contact-1024 {
+    padding-left: 0
+  }
+
+  .contacts-flex {
+    display: block;
+  }
+
+  .contacts__name {
+    padding-bottom: 5px;
+  }
+
+  .contacts__phone {
+    margin-top: 0;
+  }
+
+  .contacts-request {
+    grid-column: span 4;
+  }
+
+  .contacts-request__header {
+    margin-top: 0;
+  }
+
+  .contacts-request__textarea {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 550px) {
+  .contacts-request__btn {
+    @include styleBTN-320;
+  }
+}
+
+@media (max-width: 480px) {
+  .contacts {
+    padding: 33px 0 25px 0;
+  }
+
+  .contacts__mobile {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .contacts__header {
+    font-size: 18px;
+    line-height: 23px;
+    padding: 0 20px 14px;
+  }
+
+  .contacts__place {
+    padding: 24px 20px 17px;
+  }
+
+  .contacts__grid {
+    gap: 23px;
+  }
+
+  .contacts__name {
+    font-size: 18px;
+    line-height: 22px;
+    padding-bottom: 7px;
+  }
+
+  .contacts__address {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .contacts__contacts {
+    padding: 26px 30px 16px 19px;
+  }
+
+  .contacts__adress-vision,
+  .contacts__adress-vision1920 {
+    display: none;
+  }
+
+  .contacts__adress-vision320 {
+    display: block;
+    padding-bottom: 12px;
+  }
+
+  .contacts__svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .contacts__phone {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .contacts__contact-svg1024 {
+    display: none;
+  }
+
+  .contacts__contact-svg320 {
+    display: block;
+  }
+
+  .contacts__office {
+    padding-top: 99%;
+  }
+
+  .contacts--office {
+    padding-top: 147%;
+  }
+
+  .contacts-request {
+    grid-column: span 6;
+    padding: 0 20px;
+  }
+
+  .contacts-request__header {
+    padding-bottom: 7px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .contacts-request__text {
+    padding-bottom: 16px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .contacts-request__input {
+    padding: 12px 183px 10px 23px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .contacts-request__textarea {
+    margin-bottom: 14px;
+    padding: 10px 107px 25px 23px;
+  }
+}

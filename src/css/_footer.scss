@@ -1,0 +1,205 @@
+// @import "second";
+@import '_fonts.scss';
+@import '_variables.scss';
+@import '_mixin.scss';
+
+.footer {
+  background: $colorBlock;
+  padding-top: 25px;
+  padding-bottom: 16px;
+}
+
+.footer__content {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 30px;
+}
+
+.footer__logo {
+  grid-column: span 4;
+  outline: none;
+}
+
+.footer__logo-img-vision1024 {
+  display: none;
+}
+
+.footer__logo-img-vision768 {
+  display: none;
+}
+
+.footer__logo-img-vision320 {
+  display: none;
+}
+
+.footer__tagline {
+  font-size: 14px;
+  line-height: 18px;
+  font-family: 'TTFirsNeue-Regular', sans-serif;
+  font-weight: 400;
+  color: $colorFormContacts;
+  padding-top: 1px;
+}
+
+.footer__quote {
+  grid-column: span 6;
+}
+
+.footer__text {
+  @include projectsWritingStyle;
+  color: $colorText;
+}
+
+.footer__network {
+  grid-column: span 2;
+  margin-left: auto;
+}
+
+.footer__buttons {
+  padding-top: 7px;
+  display: flex;
+  justify-content: space-evenly;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.footer__link {
+  cursor: pointer;
+}
+
+.footer__svg {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.footer__svg {
+  fill: $colorText;
+}
+
+.footer__link:focus .footer__svg {
+  fill: $colorOrange;
+  transition: fill 0.6s ease-in-out;
+}
+
+.footer__link:hover .footer__svg {
+  fill: $colorOrangeDark;
+  transition: fill 0.6s ease-in-out;
+}
+
+.footer__link:active .footer__svg {
+  fill: $colorOrangeMedium;
+  transition: fill 0.6s ease-in-out;
+}
+
+@media (max-width: 1440px) {
+  .footer__content {
+    grid-template-columns: repeat(16, 1fr);
+    gap: 24px;
+  }
+
+  .footer__logo {
+    grid-column: span 6;
+    margin-top: 5px;
+  }
+
+  .footer__logo-img-vision {
+    display: none;
+  }
+
+  .footer__logo-img-vision1024 {
+    display: block;
+  }
+
+  .footer__quote {
+    grid-column: span 7;
+  }
+
+  .footer__network {
+    grid-column: span 3;
+    text-align: center;
+  }
+
+  .footer__tagline {
+    padding-top: 6px;
+  }
+}
+
+@media (max-width: 992px) {
+  .footer {
+    padding-top: 25px;
+  }
+
+  .footer__content {
+    display: flex;
+    gap: 0;
+  }
+
+  .footer__quote {
+    display: none;
+  }
+
+  .footer__logo-img-vision1024 {
+    display: none;
+  }
+
+  .footer__logo-img-vision768 {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 0;
+  }
+
+  .footer__content {
+    padding: 0;
+    flex-direction: column;
+  }
+
+  .footer__logo {
+    margin: 0;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $colorForm;
+  }
+
+  .footer__logo-img-vision320 {
+    display: block;
+  }
+
+  .footer__logo-img-vision768 {
+    display: none;
+  }
+
+  .footer__tagline {
+    font-size: 10px;
+    line-height: 13px;
+    padding-top: 3px;
+  }
+
+  .footer__network {
+    margin-left: 0;
+    padding-top: 31px;
+    padding-bottom: 28px;
+  }
+
+  .footer__text {
+    text-align: center;
+  }
+
+  .footer__buttons {
+    padding-top: 7px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer__link:not(:last-child) {
+    padding-right: 20px;
+  }
+}

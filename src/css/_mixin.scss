@@ -1,0 +1,57 @@
+@mixin clearListStyles {
+  margin: 0;
+  padding: 0;
+  font-weight: inherit;
+  font-size: inherit;
+  list-style: none;
+}
+
+@mixin styleBTN {
+  font-size: 16px;
+  line-height: 19px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  padding: 12px 20px;
+  color: $colorWhite;
+  border: 3px solid $colorOrange;
+  transition: transform 0.4s ease, color 0.4s linear;
+  cursor: pointer;
+}
+
+@mixin projectsTimeStyle {
+  font-size: 12px;
+  line-height: 22px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+@mixin projectsWritingStyle {
+  font-size: 16px;
+  line-height: 22px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+@mixin textForm {
+  font-size: 16px;
+  line-height: 19px;
+  font-family: 'Roboto';
+  font-weight: 400;
+}
+
+@mixin font-face($font-family, $url, $weight) {
+    @font-face {
+        font-family: '#{$font-family}';
+        src: url('../fonts/#{$url}.woff2') format('woff2'),
+        url('../fonts/#{$url}.woff') format('woff');
+        font-weight: #{$weight};
+        font-display: swap;
+        font-style: normal;
+    }
+}
+
+@mixin styleBTN-320 {
+  font-size: 14px;
+  line-height: 16px;
+  padding: 9px 19px;
+}

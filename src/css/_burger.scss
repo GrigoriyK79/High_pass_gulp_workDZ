@@ -1,0 +1,134 @@
+@import '_mixin.scss';
+@import '_variables.scss';
+@import '_fonts.scss';
+
+// .burger
+.header__menu-burger {
+  position: relative;
+  width: 20px;
+  height: 18px;
+  display: none;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  order: 2;
+  cursor: pointer;
+}
+
+.header__burger-line {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 100%;
+  height: 2px;
+  background-color: $colorWhite;
+  transform: translateY(-50%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.header__menu-burger::before,
+.header__menu-burger::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background-color: $colorWhite;
+  transition: transform 0.5s ease-in-out, top 0.5s ease-in-out, bottom 0.5s ease-in-out;
+}
+
+.header__menu-burger::before {
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+
+.header__menu-burger::after {
+  left: 0;
+  bottom: 0;
+  width: 50%;
+}
+
+.burger--active {
+  position: absolute;
+  // z-index: 5000;
+  border-radius: 100%;
+  background-color: #808080;
+}
+
+.burger--active .burger__line {
+  opacity: 0;
+}
+
+.burger--active::before {
+  top: 45%;
+  right: 20%;
+  width: 60%;
+  transform: rotate(45deg);
+}
+
+.burger--active::after {
+  bottom: auto;
+  width: 60%;
+  top: 45%;
+  left: 20%;
+  transform: rotate(-45deg);
+}
+
+.header__menu-burger-close {
+  position: absolute;
+  border-radius: 100%;
+  background-color: #808080;
+}
+
+.header__menu-burger-close .header__burger-line {
+  opacity: 0;
+}
+
+.header__menu-burger-close::before {
+  top: 45%;
+  right: 20%;
+  width: 60%;
+  transform: rotate(45deg);
+}
+
+.header__menu-burger-close::after {
+  bottom: auto;
+  width: 60%;
+  top: 45%;
+  left: 20%;
+  transform: rotate(-45deg);
+}
+
+
+@media (max-width: 550px) {
+  .header__menu-burger-close {
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .header__burger {
+    display: flex;
+    min-height: 45px;
+    padding-top: 14px;
+    padding-bottom: 13px;
+    padding-left: 21px;
+    background-color: $colorForm;
+    order: 2;
+    grid-column: span 2;
+  }
+
+  .header__menu-burger {
+    display: block;
+  }
+
+  .header__menu-burger:focus {
+    outline: 3px solid $colorOrangeMedium;
+  }
+
+  .header__menu-burger:hover rect {
+    fill: $colorOrange;
+  }
+
+  .header__menu-burger:active rect {
+    fill: $colorOrangeDark;
+  }
+}
